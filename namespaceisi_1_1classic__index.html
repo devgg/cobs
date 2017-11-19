@@ -87,23 +87,34 @@ $(document).ready(function(){initNavTree('namespaceisi_1_1classic__index.html','
 <div class="title">isi::classic_index Namespace Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>The classic Inverted Signature Index without the space-saving improvements.  
+<a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
 <tr class="memitem:a872c429327a2eea3d4d77e8e995b96c7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceisi_1_1classic__index.html#a872c429327a2eea3d4d77e8e995b96c7">create_hashes</a> (const void *input, size_t len, size_t signature_size, size_t num_hashes, const std::function&lt; void(size_t)&gt; &amp;callback)</td></tr>
+<tr class="memdesc:a872c429327a2eea3d4d77e8e995b96c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the hash used by the signatures.  <a href="#a872c429327a2eea3d4d77e8e995b96c7">More...</a><br /></td></tr>
 <tr class="separator:a872c429327a2eea3d4d77e8e995b96c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adfe219838c20a7b34d2f21ad4c02a84a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceisi_1_1classic__index.html#adfe219838c20a7b34d2f21ad4c02a84a">create_from_samples</a> (const std::experimental::filesystem::path &amp;in_dir, const std::experimental::filesystem::path &amp;out_dir, size_t signature_size, size_t block_size, size_t num_hashes)</td></tr>
+<tr class="memdesc:adfe219838c20a7b34d2f21ad4c02a84a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates multiple small indices from sample files.  <a href="#adfe219838c20a7b34d2f21ad4c02a84a">More...</a><br /></td></tr>
 <tr class="separator:adfe219838c20a7b34d2f21ad4c02a84a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6d6c2f4b6c806d2f8df7bc02094af139"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceisi_1_1classic__index.html#a6d6c2f4b6c806d2f8df7bc02094af139">combine</a> (const std::experimental::filesystem::path &amp;in_dir, const std::experimental::filesystem::path &amp;out_dir, size_t signature_size, size_t num_hashes, size_t batch_size)</td></tr>
-<tr class="separator:a6d6c2f4b6c806d2f8df7bc02094af139"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67ed5fa9e0782de192cf963b5eb8af09"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceisi_1_1classic__index.html#a67ed5fa9e0782de192cf963b5eb8af09">combine</a> (const std::experimental::filesystem::path &amp;in_dir, const std::experimental::filesystem::path &amp;out_dir, size_t batch_size, size_t signature_size, size_t num_hashes)</td></tr>
+<tr class="memdesc:a67ed5fa9e0782de192cf963b5eb8af09"><td class="mdescLeft">&#160;</td><td class="mdescRight">Combines multiple indices into one or more bigger indices.  <a href="#a67ed5fa9e0782de192cf963b5eb8af09">More...</a><br /></td></tr>
+<tr class="separator:a67ed5fa9e0782de192cf963b5eb8af09"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb5f9d8744ad128bacb39d720a583b86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceisi_1_1classic__index.html#acb5f9d8744ad128bacb39d720a583b86">create</a> (const std::experimental::filesystem::path &amp;in_dir, const std::experimental::filesystem::path &amp;out_dir, size_t signature_size, size_t block_size, size_t num_hashes, size_t batch_size)</td></tr>
+<tr class="memdesc:acb5f9d8744ad128bacb39d720a583b86"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the index by executing all necessary steps.  <a href="#acb5f9d8744ad128bacb39d720a583b86">More...</a><br /></td></tr>
 <tr class="separator:acb5f9d8744ad128bacb39d720a583b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c5ec3b8254eb2ff16c768cb57549655"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespaceisi_1_1classic__index.html#a9c5ec3b8254eb2ff16c768cb57549655">create_dummy</a> (const std::experimental::filesystem::path &amp;p, size_t signature_size, size_t block_size, size_t num_hashes)</td></tr>
+<tr class="memdesc:a9c5ec3b8254eb2ff16c768cb57549655"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates a dummy index filled with random data.  <a href="#a9c5ec3b8254eb2ff16c768cb57549655">More...</a><br /></td></tr>
 <tr class="separator:a9c5ec3b8254eb2ff16c768cb57549655"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Function Documentation</h2>
-<a id="a6d6c2f4b6c806d2f8df7bc02094af139"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6d6c2f4b6c806d2f8df7bc02094af139">&#9670;&nbsp;</a></span>combine()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The classic Inverted Signature Index without the space-saving improvements. </p>
+<p>This namespace provides methods for creation of this index. It can either be created from existing samples or with random dummy data for performance testing purposes. </p>
+</div><h2 class="groupheader">Function Documentation</h2>
+<a id="a67ed5fa9e0782de192cf963b5eb8af09"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67ed5fa9e0782de192cf963b5eb8af09">&#9670;&nbsp;</a></span>combine()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -145,6 +156,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Combines multiple indices into one or more bigger indices. </p>
 
 </div>
 </div>
@@ -198,6 +211,9 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates the index by executing all necessary steps. </p>
+<p>First calls <a class="el" href="namespaceisi_1_1classic__index.html#adfe219838c20a7b34d2f21ad4c02a84a" title="Creates multiple small indices from sample files. ">isi::classic_index::create_from_samples</a> to create multiple small indices. Afterwards combines these indices with calls to <a class="el" href="namespaceisi_1_1classic__index.html#a67ed5fa9e0782de192cf963b5eb8af09" title="Combines multiple indices into one or more bigger indices. ">isi::classic_index::combine</a> until only one index remains. </p>
+
 </div>
 </div>
 <a id="a9c5ec3b8254eb2ff16c768cb57549655"></a>
@@ -237,6 +253,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Creates a dummy index filled with random data. </p>
 
 </div>
 </div>
@@ -284,6 +302,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Creates multiple small indices from sample files. </p>
+
 </div>
 </div>
 <a id="a872c429327a2eea3d4d77e8e995b96c7"></a>
@@ -329,6 +349,8 @@ Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>Creates the hash used by the signatures. </p>
 
 </div>
 </div>
