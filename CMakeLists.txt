@@ -14,6 +14,11 @@ MESSAGE("TEST_FILES       ${TEST_FILES}")
 MESSAGE("EXECUTABLE_FILES ${EXECUTABLE_FILES}")
 
 include(dependencies/dependency.cmake)
+
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/dependencies/CLI/include)
+
+add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/dependencies/xxHash/cmake_unofficial)
+
 file(COPY test/resources DESTINATION test)
 include_directories(lib/ ${STXXL_INCLUDE_DIRS} ${DEPENDENCY_DIR}/xxhash/src ${DEPENDENCY_DIR}/cli11/src/include)
 

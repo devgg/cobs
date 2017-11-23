@@ -1,0 +1,6 @@
+[submodule "dependencies/CLI"]
+	path = dependencies/CLI
+	url = https://github.com/CLIUtils/CLI11.git
+[submodule "dependencies/xxHash"]
+	path = dependencies/xxHash
+	url = https://github.com/Cyan4973/xxHash.git
