@@ -24,24 +24,30 @@ matrix:
       os: linux
       addons: *gcc7
 
-    # clang 3.7 without AddressSanitizer, Debug & Release
-    - env: CMAKE_CC="clang-3.7" CMAKE_CXX="clang++-3.7" BUILD_TYPE="Debug" COMPILER_FLAGS=""
+    - env: CMAKE_CC="gcc-7" CMAKE_CXX="g++-7" BUILD_TYPE="Release" COMPILER_FLAGS="-fsanitize=address"
       os: linux
-      addons: &clang37
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-            - llvm-toolchain-precise-3.7
-            - george-edison55-precise-backports # cmake / doxygen
-          packages:
-            - clang-3.7
-            - cmake
-            - cmake-data
+      addons: *gcc7
 
-    # clang 3.7 without AddressSanitizer (there are some system-dependent LeakSanitizer errors)
-    - env: CMAKE_CC="clang-3.7" CMAKE_CXX="clang++-3.7" BUILD_TYPE="Release" COMPILER_FLAGS=""
-      os: linux
-      addons: *clang37
+    ############################################################################
+
+    # # clang 5.0 without AddressSanitizer, Debug & Release
+    # - env: CMAKE_CC="clang-5.0" CMAKE_CXX="clang++-5.0" BUILD_TYPE="Debug" COMPILER_FLAGS=""
+    #   os: linux
+    #   addons: &clang37
+    #     apt:
+    #       sources:
+    #         - ubuntu-toolchain-r-test
+    #         - llvm-toolchain-trusty-5.0
+    #         - george-edison55-precise-backports # cmake / doxygen
+    #       packages:
+    #         - clang-5.0
+    #         - cmake
+    #         - cmake-data
+
+    # # clang 5.0 without AddressSanitizer
+    # - env: CMAKE_CC="clang-5.0" CMAKE_CXX="clang++-5.0" BUILD_TYPE="Release" COMPILER_FLAGS=""
+    #   os: linux
+    #   addons: *clang37
 
 before_script:
 
@@ -56,6 +62,7 @@ before_script:
       -DCMAKE_C_COMPILER="$CMAKE_CC" -DCMAKE_CXX_COMPILER="$CMAKE_CXX"
       -DCMAKE_C_FLAGS="$COMPILER_FLAGS" -DCMAKE_CXX_FLAGS="$COMPILER_FLAGS"
       $CMAKE_ARGS ..
+  - make -j4
 
 script:
   - ctest
