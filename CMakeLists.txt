@@ -1,5 +1,5 @@
-cmake_minimum_required(VERSION 3.9.6)
-cmake_policy(VERSION 3.9.6)
+cmake_minimum_required(VERSION 3.2.2)
+cmake_policy(VERSION 3.2.2)
 
 project(thesis)
 
@@ -33,9 +33,7 @@ foreach(target ${EXECUTABLE_FILES})
 endforeach(target)
 
 enable_testing()
-include(GoogleTest)
-add_executable(tests ${TEST_FILES} ${SOURCE_FILES})
-target_compile_definitions(tests PRIVATE isi_test)
-target_link_libraries(tests ${libs} gtest gtest_main)
-gtest_add_tests(tests "" ${TEST_FILES})
-
+add_executable(isi_tests ${TEST_FILES} ${SOURCE_FILES})
+target_compile_definitions(isi_tests PRIVATE isi_test)
+target_link_libraries(isi_tests ${libs} gtest gtest_main)
+add_test(isi_tests isi_tests)
